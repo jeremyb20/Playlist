@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+        <!-- <base ng-href="/"> -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./content/css/styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <header ng-include="'header.html'"></header>
+    <main ng-view></main>
+    <script src="./app/lib/angular.min.js"></script>
+    <script src="./app/lib/angular-route.min.js"></script>
+    <script src="./app/lib/angular-animate.min.js"></script>
+    <script src="./app/app.js"></script> 
+    <!-- python -m SimpleHTTPServer 9000   copiar en la terminal, mac linux, para crear un localhost-->
+</body>
+</html>

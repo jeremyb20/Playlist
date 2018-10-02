@@ -1,0 +1,22 @@
+<div class="content">    
+    <button ng-click="order = 'name' ">Order by name</button>
+    <button ng-click="order = 'belt' ">Order by belt</button>
+    <input type="text" ng-model="search" placeholder="search user" >
+
+    <ul id="nija-list">
+        <li ng-repeat="arr in array | orderBy: order | filter: search" ng-show="arr.available">
+            <img ng-src="{{arr.thumb}}" style="margin: -12px 10px 0 0; float:left; width: 50px;" alt="Image" ng-show="arr.thumb">
+            <h3>{{arr.name}} - {{arr.rate | currency}}</h3>
+            <div class="remove" ng-click="removeArr(arr)" >x</div>
+            <span class="belt" style="background: {{arr.belt}}">{{arr.belt}} Belt</span>
+        </li>
+    </ul> 
+    <form ng-submit="addNew()">
+            <h1>My form</h1>
+            <input type="text" placeholder="Name" ng-model="newUser.name">
+            <input type="text" placeholder="Belt" ng-model="newUser.belt">
+            <input type="text" placeholder="Rate" ng-model="newUser.rate">
+            <input type="submit" value="Add new">
+        </form>
+    <a href="" ng-click="removeAll()" >Remove all array</a> 
+</div>    
